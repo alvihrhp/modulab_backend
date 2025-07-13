@@ -68,3 +68,23 @@ backend/
 ## License
 
 ISC
+
+---
+
+## 🚀 Deployment ke Railway
+
+1. **Klik "New Project" di Railway, pilih "Deploy from GitHub repo"**
+2. **Pilih repo ini, lalu deploy**
+3. **Set Environment Variables di Railway:**
+   - `DATABASE_URL` (contoh: postgresql://user:password@host:port/db)
+   - `JWT_SECRET` (contoh: hamburger)
+   - `API_PORT` (contoh: 3001)
+   - (opsional) variabel lain sesuai kebutuhan
+4. **Railway otomatis menjalankan:**
+   - `npm run build` (build TypeScript)
+   - `npm start` (start node dist/index.js)
+5. **Pastikan database sudah siap dan terhubung**
+
+**Catatan:**
+- Untuk development lokal, gunakan `npm run dev`.
+- Untuk production (Railway), gunakan `npm run build` lalu `npm start`.
